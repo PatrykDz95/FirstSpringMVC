@@ -18,7 +18,7 @@
     Last name: <form:input path="lastName"/>
 
     <br><br>
-
+    Choose your country:
     <form:select path="country">
         <form:options items="${student.countryOptions}"/>
     </form:select>
@@ -29,6 +29,11 @@
 
     <form:radiobuttons path="favoriteLanguage" items="${student.favoriteLanguageList}"/>
 
+    <br><br>
+    Operating Systems:
+    Linux <form:checkbox path="operatingSystem" value="Linux"/>
+    Windows <form:checkbox path="operatingSystem" value="Windows"/>
+    Mac OS <form:checkbox path="operatingSystem" value="Mac OS"/>
     <br><br>
 
     <input type="submit" value="Submit"/>
