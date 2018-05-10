@@ -1,6 +1,8 @@
 package com.luv2code.springdemo;
 
 
+import com.luv2code.springdemo.com.luv2code.springdemo.validation.CourseCode;
+
 import javax.validation.constraints.*;
 
 public class Customer {
@@ -18,6 +20,9 @@ private Integer freePasses;
 
 @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "only 5 digits")
 private String postalCode;
+
+@CourseCode(value = "COS", message = "must start with COS")
+private String courseCode;
 
     public String getFirstName() {
         return firstName;
@@ -49,5 +54,13 @@ private String postalCode;
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
     }
 }
